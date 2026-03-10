@@ -30,7 +30,7 @@
         <input
           type="submit"
           value="Login"
-          class="bg-blue-500 hover:bg-blue-600 px-4 text-sm mx-auto py-2 rounded-2xl uppercase"
+          class="bg-blue-500 hover:bg-blue-600 px-4 text-sm mx-auto py-2 rounded-2xl uppercase tracking-wider"
         />
       </form>
     </div>
