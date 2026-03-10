@@ -8,7 +8,7 @@
   <body
     class="bg-gray-100 min-h-screen flex items-center justify-center font-mono"
   >
-    <div class="bg-white w-1/4 p-14 rounded-xl shadow-lg">
+    <div class="main bg-white w-1/4 p-14 rounded-xl shadow-lg">
       <img
         src="./public/company-logo.png"
         alt="Company Logo"
