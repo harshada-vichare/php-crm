@@ -1,2 +1,13 @@
-# Ignore the VS Code settings folder
+# environment variables
+.env
+
+# logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
 .vscode/
