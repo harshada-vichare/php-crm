@@ -71,9 +71,10 @@
         </tbody>
       </table>
     </div>
-    <div>
-      <hr />
-      <p>Copyright &copy; X</p>
+    <div class="footer border-t-2">
+      <p class="p-4">Copyright &copy; X</p>
     </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
   </body>
 </html>
