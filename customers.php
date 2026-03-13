@@ -1,21 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customers</title>
-  </head>
+  <?php require_once('./src/header.php'); ?>
   <body class="bg-gray-100 min-h-screen font-mono flex flex-col">
-    <div class="navbar border-b-2 flex justify-between p-4 items-center">
-      <img src="./public/company-logo.png" alt="Company Logo" class="h-16" />
-      <span class="mr-10 ml-auto">
-        <a href="./home.php" class="mr-10">Home</a>
-        <span><em>Hello X</em></span>
-      </span>
-      <button class="bg-blue-500 hover:bg-blue-600 rounded-2xl py-2 px-3">
-        Logout
-      </button>
-    </div>
+    <?php require_once('./src/navbar.php'); ?>
     <div
       class="main bg-white w-2/3 shadow-md text-gray-800 flex flex-grow flex-col gap-4 px-10 py-16 mx-auto my-10 rounded"
     >
@@ -114,10 +101,7 @@
         </tbody>
       </table>
     </div>
-    <div class="footer flex justify-center border-t-2">
-      <p class="p-4">Copyright &copy; X</p>
-    </div>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <?php include_once('./src/footer.php'); ?>
   </body>
 </html>
