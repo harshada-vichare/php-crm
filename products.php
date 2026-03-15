@@ -7,7 +7,7 @@
       class="main bg-white w-2/3 shadow-md text-gray-800 flex flex-grow flex-col gap-4 px-10 py-16 mx-auto my-10 rounded"
     >
       <h1 class="text-4xl font-bold text-center mb-8">Products</h1>
-      <div class="flex justify-between">
+      <div class="flex justify-between mb-5">
         <button class="bg-yellow-200 px-6 py-2 rounded-2xl">Add</button>
         <input
           class="bg-gray-200 px-8 w-3/4 rounded-md"
