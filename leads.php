@@ -1,107 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leads</title>
-  </head>
-  <body>
-    <div>
-      <span>logo</span>
-      <span>Home</span>
-      <span><em>Hello X</em></span>
-      <span>Logout</span>
-      <hr />
-    </div>
-    <div>
-      <h1>Leads</h1>
-      <div>
-        <button>Add</button>
+  <?php require_once('./src/header.php'); ?>
+  <body class="bg-gray-100 font-mono">
+    <?php require_once('./src/navbar.php'); ?>
+    <div
+      class="main bg-white w-2/3 shadow-md text-gray-800 flex flex-grow flex-col gap-4 px-10 py-16 mx-auto my-10 rounded"
+    >
+      <h1 class="text-4xl font-bold text-center mb-8">Leads</h1>
+      <div class="flex justify-between mb-5">
+        <button class="bg-yellow-200 px-6 py-2 rounded-2xl">Add</button>
         <input
+          class="bg-gray-200 w-3/4 rounded-md px-8"
           type="text"
           name="search-lead"
           id="search-lead"
           placeholder="Enter name to search..."
         />
       </div>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Customer</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Customer Name</td>
-              <td>Contacted</td>
-              <td>
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Customer Name</td>
-              <td>Contacted</td>
-              <td>
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Customer Name</td>
-              <td>Contacted</td>
-              <td>
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Customer Name</td>
-              <td>Contacted</td>
-              <td>
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Customer Name</td>
-              <td>Contacted</td>
-              <td>
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Customer Name</td>
-              <td>Contacted</td>
-              <td>
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table>
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="p-3 text-left">No</th>
+            <th class="p-3 text-left">Customer</th>
+            <th class="p-3 text-left">Status</th>
+            <th class="p-3 text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="p-3">1</td>
+            <td class="p-3">Customer Name</td>
+            <td class="p-3">Contacted</td>
+            <td class="p-3">
+              <button class="bg-orange-400 text-sm px-1 rounded-md text-white">
+                View
+              </button>
+              <button class="bg-blue-500 text-sm px-1 rounded-md text-white">
+                Edit
+              </button>
+              <button class="bg-red-500 text-sm px-1 rounded-md text-white">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3">1</td>
+            <td class="p-3">Customer Name</td>
+            <td class="p-3">Contacted</td>
+            <td class="p-3">
+              <button class="bg-orange-400 text-sm px-1 rounded-md text-white">
+                View
+              </button>
+              <button class="bg-blue-500 text-sm px-1 rounded-md text-white">
+                Edit
+              </button>
+              <button class="bg-red-500 text-sm px-1 rounded-md text-white">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3">1</td>
+            <td class="p-3">Customer Name</td>
+            <td class="p-3">Contacted</td>
+            <td class="p-3">
+              <button class="bg-orange-400 text-sm px-1 rounded-md text-white">
+                View
+              </button>
+              <button class="bg-blue-500 text-sm px-1 rounded-md text-white">
+                Edit
+              </button>
+              <button class="bg-red-500 text-sm px-1 rounded-md text-white">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3">1</td>
+            <td class="p-3">Customer Name</td>
+            <td class="p-3">Contacted</td>
+            <td class="p-3">
+              <button class="bg-orange-400 text-sm px-1 rounded-md text-white">
+                View
+              </button>
+              <button class="bg-blue-500 text-sm px-1 rounded-md text-white">
+                Edit
+              </button>
+              <button class="bg-red-500 text-sm px-1 rounded-md text-white">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3">1</td>
+            <td class="p-3">Customer Name</td>
+            <td class="p-3">Contacted</td>
+            <td class="p-3">
+              <button class="bg-orange-400 text-sm px-1 rounded-md text-white">
+                View
+              </button>
+              <button class="bg-blue-500 text-sm px-1 rounded-md text-white">
+                Edit
+              </button>
+              <button class="bg-red-500 text-sm px-1 rounded-md text-white">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div>
-      <hr />
-      <p>Copyright &copy; X</p>
-    </div>
+
+    <?php include_once('./src/footer.php'); ?>
   </body>
 </html>
