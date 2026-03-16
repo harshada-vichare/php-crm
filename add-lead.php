@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php require_once('./src/header.php'); ?>
-  <body>
+  <body class="bg-gray-100 min-h-screen font-mono flex flex-col">
     <?php require_once('./src/navbar.php'); ?>
+    
     <div
       class="main bg-white w-2/3 shadow-md text-gray-800 flex flex-grow flex-col gap-4 px-10 py-16 mx-auto my-10 rounded"
     >
-      <h1 class="text-4xl font-bold text-center mb-8">Add Product</h1>
+      <h1 class="text-4xl font-bold text-center mb-8">Add Lead</h1>
       <form action="./save-lead.php" method="post" class="flex flex-col gap-6">
         <div class="flex items-center gap-4">
           <label class="w-36 font-medium">Customer name :</label>
