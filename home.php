@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php require_once('./src/header.php'); ?>
+
   <body class="bg-gray-100 min-h-screen font-mono flex flex-col">
     <?php require_once('./src/navbar.php'); ?>
 
