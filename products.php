@@ -8,7 +8,9 @@
     >
       <h1 class="text-4xl font-bold text-center mb-8">Products</h1>
       <div class="flex justify-between mb-5">
-        <button class="bg-yellow-200 px-6 py-2 rounded-2xl">Add</button>
+        <button class="bg-yellow-200 px-6 py-2 rounded-2xl">
+          <a href="./add-product.php">Add</a>
+        </button>
         <input
           class="bg-gray-200 px-8 w-3/4 rounded-md"
           type="text"
@@ -101,7 +103,7 @@
         </tbody>
       </table>
     </div>
-    
+
     <?php include_once('./src/footer.php'); ?>
   </body>
 </html>
