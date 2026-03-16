@@ -2,7 +2,8 @@
 <div class="navbar border-b-2 flex justify-between p-4 items-center">
   <img src="./public/company-logo.png" alt="Company Logo" class="h-16" />
   <div class="mr-10 ml-auto">
-    <?php if($last_part !== 'home.php'){ ?>
+    <?php $nameArr = ['home.php','add-product.php','add-lead.php']; 
+    if(!in_array($last_part, $nameArr)){ ?>
     <a href="./home.php" class="mr-10">Home</a>
     <?php } ?>
     <span><em>Hello X</em></span>
