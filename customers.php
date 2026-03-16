@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php require_once('./src/header.php'); ?>
+
   <body class="bg-gray-100 min-h-screen font-mono flex flex-col">
     <?php require_once('./src/navbar.php'); ?>
+
     <div
       class="main bg-white w-2/3 shadow-md text-gray-800 flex flex-grow flex-col gap-4 px-10 py-16 mx-auto my-10 rounded"
     >
