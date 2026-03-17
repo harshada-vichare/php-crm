@@ -20,12 +20,16 @@
           type="text"
           placeholder="Username / Email"
           name="username"
+          id="username"
+          required
         />
         <input
           class="bg-gray-200 text-center p-2 rounded-md border focus:outline-none focus:border-blue-200"
           type="password"
           placeholder="Passowrd"
           name="password"
+          id="password"
+          required
         />
         <input
           type="submit"
@@ -36,5 +40,25 @@
     </div>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      const form = document.querySelector("form");
+      const button = document.querySelector("button");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let username = document.querySelector("#username");
+        let password = document.querySelector("#password");
+
+        if (!username || !password) {
+          alert("Fill required fields.");
+        } else {
+          // button.textContent = "Verifying...";
+          // button.disabled = true;
+          form.action = "./check-credentials.php";
+          form.submit();
+        }
+      });
+    </script>
   </body>
 </html>
