@@ -9,6 +9,15 @@
       class="main bg-white w-2/3 shadow-md text-gray-800 flex flex-grow flex-col gap-4 px-10 py-16 mx-auto my-10 rounded"
     >
       <h1 class="text-4xl font-bold mb-8 text-center">Customers</h1>
+      <div class="flex justify-between mb-5">
+        <input
+          class="bg-gray-200 px-8 py-2 w-2/4 rounded-md"
+          type="text"
+          name="search-product"
+          id="search-product"
+          placeholder="Enter name to search..."
+        />
+      </div>
       <?php $sql = "SELECT `id`, `customer_name`, `company`, `phone`, `email`
       FROM `customers` WHERE `is_customer` = 'Y'"; $result = $conn->query($sql);
       ?>
