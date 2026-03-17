@@ -3,12 +3,15 @@
   <?php require_once('./src/header.php'); ?>
 
   <body class="bg-gray-100 min-h-screen font-mono flex flex-col">
-    <?php require_once('./src/navbar.php'); ?>
+    <?php require_once('./src/navbar.php'); require_once('./src/db.php'); ?>
 
     <div
       class="main bg-white w-2/3 shadow-md text-gray-800 flex flex-grow flex-col gap-4 px-10 py-16 mx-auto my-10 rounded"
     >
       <h1 class="text-4xl font-bold mb-8 text-center">Customers</h1>
+      <?php $sql = "SELECT `id`, `customer_name`, `company`, `phone`, `email`
+      FROM `customers` WHERE `is_customer` = 'Y'"; $result = $conn->query($sql);
+      ?>
       <table>
         <thead class="bg-gray-200">
           <tr>
@@ -20,90 +23,43 @@
           </tr>
         </thead>
         <tbody>
+          <?php $count=1; while($row = $result->fetch_assoc()){ ?>
           <tr class="border-b">
-            <td class="p-3">1</td>
-            <td class="p-3">Customer Name</td>
-            <td class="p-3">ABC Ltd.</td>
+            <td class="p-3"><?php echo $count; ?></td>
+            <td class="p-3"><?php echo $row['customer_name']; ?></td>
+            <td class="p-3"><?php echo $row['company']; ?></td>
             <td class="p-3">
-              <p>abc.new@abc.in</p>
-              <p>9878675645</p>
+              <p><?php echo $row['email']; ?></p>
+              <p><?php echo $row['phone']; ?></p>
             </td>
             <td class="p-3">
               <button class="bg-orange-400 text-white px-1 text-sm rounded-md">
                 View
               </button>
-              <button class="bg-blue-500 text-white px-1 text-sm rounded-md">
+              <button class="bg-blue-500 text-white px-1 text-sm rounded-md"  id=<?php echo "edit_".$row['id']; ?>>
                 Edit
               </button>
-              <button class="bg-red-500 text-white px-1 rounded-md text-sm">
+              <button class="bg-red-500 text-white px-1 rounded-md text-sm"  id=<?php echo "delete_".$row['id']; ?>>
                 Delete
               </button>
             </td>
           </tr>
-          <tr class="border-b">
-            <td class="p-3">1</td>
-            <td class="p-3">Customer Name</td>
-            <td class="p-3">ABC Ltd.</td>
-            <td class="p-3">
-              <p>abc.new@abc.in</p>
-              <p>9878675645</p>
-            </td>
-            <td class="p-3">
-              <button class="bg-orange-400 text-white px-1 text-sm rounded-md">
-                View
-              </button>
-              <button class="bg-blue-500 text-white px-1 text-sm rounded-md">
-                Edit
-              </button>
-              <button class="bg-red-500 text-white px-1 rounded-md text-sm">
-                Delete
-              </button>
-            </td>
-          </tr>
-          <tr class="border-b">
-            <td class="p-3">1</td>
-            <td class="p-3">Customer Name</td>
-            <td class="p-3">ABC Ltd.</td>
-            <td class="p-3">
-              <p>abc.new@abc.in</p>
-              <p>9878675645</p>
-            </td>
-            <td class="p-3">
-              <button class="bg-orange-400 text-white px-1 text-sm rounded-md">
-                View
-              </button>
-              <button class="bg-blue-500 text-white px-1 text-sm rounded-md">
-                Edit
-              </button>
-              <button class="bg-red-500 text-white px-1 rounded-md text-sm">
-                Delete
-              </button>
-            </td>
-          </tr>
-          <tr class="border-b">
-            <td class="p-3">1</td>
-            <td class="p-3">Customer Name</td>
-            <td class="p-3">ABC Ltd.</td>
-            <td class="p-3">
-              <p>abc.new@abc.in</p>
-              <p>9878675645</p>
-            </td>
-            <td class="p-3">
-              <button class="bg-orange-400 text-white px-1 text-sm rounded-md">
-                View
-              </button>
-              <button class="bg-blue-500 text-white px-1 text-sm rounded-md">
-                Edit
-              </button>
-              <button class="bg-red-500 text-white px-1 rounded-md text-sm">
-                Delete
-              </button>
-            </td>
-          </tr>
+          <?php $count++; } ?>
         </tbody>
       </table>
     </div>
 
     <?php include_once('./src/footer.php'); ?>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        const buttons = document.querySelectorAll('button');
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', function () {
+            alert(this.id);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
