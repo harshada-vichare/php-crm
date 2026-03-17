@@ -21,10 +21,9 @@
           placeholder="Enter name to search..."
         />
       </div>
-      <?php $sql = "SELECT `id`, `name`, `description`, `base_price` FROM `products`"; 
-      
+      <?php $sql = "SELECT `id`, `name`, `description`, `base_price` FROM `products` WHERE `is_deleted` = 'N'"; 
       $result = $conn->query($sql);
-       ?>
+      ?>
       <table>
         <thead class="bg-gray-200">
           <tr>
